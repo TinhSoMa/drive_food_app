@@ -1,4 +1,4 @@
-# 🚚 Driver Delivery App - Flutter Mobile Application
+# 🚚 Ứng Dụng Tài Xế Giao Hàng - Flutter Mobile App
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
@@ -6,9 +6,9 @@
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
 [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://developer.apple.com/ios/)
 
-## 📱 Tổng quan dự án
+## 📱 Giới thiệu dự án
 
-Ứng dụng di động Flutter dành cho tài xế giao hàng với hệ thống quản lý đơn hàng toàn diện, theo dõi vị trí real-time và tích hợp đầy đủ các dịch vụ Firebase. Ứng dụng hỗ trợ đầy đủ quy trình từ đăng ký, xác thực đến quản lý đơn hàng và thống kê doanh thu.
+Ứng dụng di động Flutter dành cho tài xế giao hàng với hệ thống quản lý đơn hàng toàn diện, theo dõi vị trí thời gian thực và tích hợp đầy đủ các dịch vụ Firebase. Ứng dụng hỗ trợ đầy đủ quy trình từ đăng ký, xác thực đến quản lý đơn hàng và thống kê doanh thu.
 
 ## ✨ Tính năng chính
 
@@ -30,10 +30,10 @@
 - **Chi tiết đơn hàng**: Thông tin khách hàng, địa chỉ, sản phẩm
 - **Tích hợp Maps**: Điều hướng với Google Maps API
 
-### 🗺️ Theo dõi vị trí Real-time
+### 🗺️ Theo dõi vị trí thời gian thực
 - **GPS Tracking**: Độ chính xác cao với Geolocator
 - **Firebase Realtime**: Cập nhật vị trí mỗi 2 giây
-- **Background Service**: Tracking ngay cả khi app ở background
+- **Dịch vụ nền**: Tracking ngay cả khi app ở chế độ nền
 - **Bản đồ tương tác**: Hiển thị vị trí hiện tại với Flutter Map
 
 ### 📊 Thống kê và báo cáo
@@ -42,17 +42,17 @@
 - **Báo cáo hiệu suất**: Metrics và KPI cho tài xế
 - **Dashboard**: Giao diện trực quan với charts
 
-### 🔔 Thông báo Push
-- **FCM Integration**: Firebase Cloud Messaging
-- **Thông báo đơn hàng**: Nhận đơn mới real-time
+### 🔔 Thông báo đẩy
+- **Tích hợp FCM**: Firebase Cloud Messaging
+- **Thông báo đơn hàng**: Nhận đơn mới thời gian thực
 - **Cập nhật trạng thái**: Thông báo thay đổi trạng thái đơn
-- **Quản lý token**: Auto-refresh FCM tokens
+- **Quản lý token**: Tự động làm mới FCM tokens
 
 ### 🛠️ Tính năng bổ sung
-- **Chia sẻ chuyến đi**: Share trip với người thân
-- **Mời bạn bè**: Referral system
+- **Chia sẻ chuyến đi**: Chia sẻ chuyến đi với người thân
+- **Mời bạn bè**: Hệ thống giới thiệu
 - **Chứng minh giao hàng**: Chụp ảnh xác nhận
-- **Cài đặt**: Preferences và configuration
+- **Cài đặt**: Tùy chọn và cấu hình
 
 ## 🏗️ Kiến trúc và Công nghệ
 
@@ -98,7 +98,7 @@ lib/
 └── main.dart        # Entry point
 ```
 
-## 🚀 Cài đặt và chạy dự án
+## 🚀 Hướng dẫn cài đặt và chạy dự án
 
 ### Yêu cầu hệ thống
 - Flutter SDK 3.2.3+
@@ -106,15 +106,15 @@ lib/
 - Android Studio / VS Code
 - Android SDK / Xcode (cho iOS)
 
-### Cài đặt dependencies
+### Cài đặt thư viện
 ```bash
 flutter pub get
 ```
 
 ### Cấu hình Firebase
-1. Tạo project Firebase
+1. Tạo dự án Firebase
 2. Thêm `google-services.json` (Android) và `GoogleService-Info.plist` (iOS)
-3. Cấu hình Firebase services:
+3. Cấu hình các dịch vụ Firebase:
    - Realtime Database
    - Cloud Firestore
    - Cloud Storage
@@ -122,25 +122,25 @@ flutter pub get
 
 ### Chạy ứng dụng
 ```bash
-# Debug mode
+# Chế độ debug
 flutter run
 
-# Release mode
+# Chế độ release
 flutter run --release
 
-# Specific platform
+# Nền tảng cụ thể
 flutter run -d android
 flutter run -d ios
 ```
 
-## 📱 Screenshots
+## 📱 Hình ảnh ứng dụng
 
-| Authentication | Home Screen | Orders Management |
-|----------------|-------------|-------------------|
+| Xác thực | Màn hình chính | Quản lý đơn hàng |
+|----------|----------------|------------------|
 | ![Auth](assets/screenshots/auth.png) | ![Home](assets/screenshots/home.png) | ![Orders](assets/screenshots/orders.png) |
 
-| Location Tracking | Statistics | Profile Management |
-|-------------------|------------|-------------------|
+| Theo dõi vị trí | Thống kê | Quản lý hồ sơ |
+|-----------------|----------|---------------|
 | ![Location](assets/screenshots/location.png) | ![Stats](assets/screenshots/stats.png) | ![Profile](assets/screenshots/profile.png) |
 
 ## 🔧 Cấu hình API
@@ -154,15 +154,15 @@ class AppConfig {
 }
 ```
 
-## 📊 Performance & Optimization
+## 📊 Hiệu suất và Tối ưu hóa
 
-- **Background Services**: Efficient location tracking
-- **Memory Management**: Optimized image loading và caching
-- **Network**: Retry mechanisms và offline support
-- **Battery**: Optimized GPS usage
-- **UI**: Smooth animations và responsive design
+- **Dịch vụ nền**: Theo dõi vị trí hiệu quả
+- **Quản lý bộ nhớ**: Tối ưu hóa tải và lưu trữ hình ảnh
+- **Mạng**: Cơ chế thử lại và hỗ trợ offline
+- **Pin**: Sử dụng GPS được tối ưu hóa
+- **Giao diện**: Animation mượt mà và thiết kế responsive
 
-## 🧪 Testing
+## 🧪 Kiểm thử
 
 ```bash
 # Unit tests
@@ -171,69 +171,65 @@ flutter test
 # Integration tests
 flutter test integration_test/
 
-# Coverage report
+# Báo cáo coverage
 flutter test --coverage
 ```
 
-## 📈 Metrics & Analytics
+## 📈 Thống kê và Phân tích
 
-- **Crash Reporting**: Firebase Crashlytics
-- **Performance**: Firebase Performance Monitoring
-- **Analytics**: Firebase Analytics
-- **Custom Events**: User behavior tracking
+- **Báo cáo lỗi**: Firebase Crashlytics
+- **Hiệu suất**: Firebase Performance Monitoring
+- **Phân tích**: Firebase Analytics
+- **Sự kiện tùy chỉnh**: Theo dõi hành vi người dùng
 
 ## 🔒 Bảo mật
 
-- **Data Encryption**: Sensitive data encryption
-- **API Security**: JWT token validation
-- **File Upload**: Secure file handling
-- **Location Privacy**: User consent management
+- **Mã hóa dữ liệu**: Mã hóa dữ liệu nhạy cảm
+- **Bảo mật API**: Xác thực JWT token
+- **Tải file**: Xử lý file an toàn
+- **Quyền riêng tư vị trí**: Quản lý sự đồng ý của người dùng
 
 ## 🌐 Đa nền tảng
 
 - ✅ **Android**: API 21+ (Android 5.0+)
 - ✅ **iOS**: iOS 11.0+
-- 🔄 **Web**: In development
-- 🔄 **Desktop**: Planned
+- 🔄 **Web**: Đang phát triển
+- 🔄 **Desktop**: Dự kiến
 
-## 📝 Changelog
+## 📝 Lịch sử phiên bản
 
-### v1.0.0 (Current)
-- ✅ Complete authentication system
-- ✅ Order management
-- ✅ Real-time location tracking
-- ✅ Firebase integration
-- ✅ Push notifications
-- ✅ Statistics dashboard
+### v1.0.0 (Hiện tại)
+- ✅ Hệ thống xác thực hoàn chỉnh
+- ✅ Quản lý đơn hàng
+- ✅ Theo dõi vị trí thời gian thực
+- ✅ Tích hợp Firebase
+- ✅ Thông báo đẩy
+- ✅ Bảng điều khiển thống kê
 
-## 🤝 Contributing
+## 🤝 Đóng góp
 
-1. Fork the project
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+1. Fork dự án
+2. Tạo nhánh tính năng (`git checkout -b feature/TinhNangMoi`)
+3. Commit thay đổi (`git commit -m 'Thêm tính năng mới'`)
+4. Push lên nhánh (`git push origin feature/TinhNangMoi`)
+5. Tạo Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Developer
 
 **Công Tình**
-- GitHub: [@congtinh](https://github.com/congtinh)
-- LinkedIn: [Công Tình](https://linkedin.com/in/congtinh)
-- Email: congtinh@example.com
+- GitHub: [@congtinh](https://github.com/TinhSoMa)
+- Email: congtinh06032003@gmail.com
 
-## 🙏 Acknowledgments
+## 🙏 Lời cảm ơn
 
-- Flutter team for the amazing framework
-- Firebase team for backend services
-- Open source community for packages
-- Contributors and testers
+- Đội ngũ Flutter vì framework tuyệt vời
+- Đội ngũ Firebase vì các dịch vụ backend
+- Cộng đồng mã nguồn mở vì các package
+- Các nhà đóng góp và người kiểm thử
 
 ---
 
-⭐ **Star this repository if you found it helpful!**
+⭐ **Hãy star repository này nếu bạn thấy hữu ích!**
 
-📱 **Download the app and experience the smooth delivery management!**
+📱 **Tải ứng dụng và trải nghiệm quản lý giao hàng mượt mà!**
